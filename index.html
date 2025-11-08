@@ -20,9 +20,28 @@
   <style>
     /* Minor custom styles */
     :root {
-      --brand-500: #0b6e4f; /* deep green */
+      --brand-500: #005e50; /* deep green */
       --brand-600: #0a5e44;
       --muted: #6b7280;
+    }
+
+    .bg-brand {
+      --tw-bg-opacity: 1;
+      background-color: var(--brand-500);
+    }
+
+    .product-img {
+      height: 15rem;
+    }
+
+    .border-brand {
+      --tw-border-opacity: 1;
+      border-color: var(--brand-500);
+    }
+
+    .text-brand {
+      --tw-text-opacity: 1;
+      color: var(--brand-500);
     }
 
     /* gradient overlay on hero */
@@ -66,14 +85,12 @@
         <a href="#about" class="hover:text-emerald-700">Who we are</a>
         <a href="#products" class="hover:text-emerald-700">Products</a>
         <a href="#quality" class="hover:text-emerald-700">Quality</a>
-        <a href="#certs" class="hover:text-emerald-700">Certifications</a>
         <a href="#contact" class="hover:text-emerald-700">Contact</a>
-        <!-- <a href="assets/img/catalogue.pdf" class="ml-3 px-3 py-2 rounded-md border border-emerald-600 text-emerald-700 hover:bg-emerald-50" download>Download Catalogue</a> -->
       </nav>
 
       <div class="flex items-center gap-3">
         <a href="tel:+919826054282" class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-md border border-slate-200">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h4l2 5v6l3 3 5-2V7l2-5h4"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h4l2 5v6l3 3 5-2V7l2-5h4"/></svg>
           <span class="text-sm text-slate-700">+91 9826054282</span>
         </a>
 
@@ -103,119 +120,76 @@
   <main>
 
     <!-- HERO -->
-    <section id="hero" class="hero-bg min-h-[72vh] flex items-center">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0 flex flex-col lg:flex-row items-center gap-8">
+    <section id="hero" class="hero-bg min-h-[70vh] flex items-center">
+      <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
         <div class="lg:w-6/12 text-white" data-aos="fade-right">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-md">Delivering the authentic taste of Indian agro products across the globe</h2>
-          <p class="mt-4 text-lg text-emerald-100/90 max-w-xl">We source directly from certified farms and deliver premium-quality grains, spices, oil seeds and processed produce — meeting ISO, HACCP & FSSAI standards.</p>
-
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#products" class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-white text-emerald-700 shadow hover:translate-y-[-2px] transition">Explore Products</a>
-            <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-white/40 text-white hover:bg-white/10 transition">Contact Sales</a>
-          </div>
-
-          <div class="mt-6 flex gap-4 items-center text-sm text-emerald-100">
-            <div class="flex items-center gap-2">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h4l2 5v6l3 3 5-2V7l2-5h4"/></svg>
-              <span>+91 9826054282</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 01-8 0"/></svg>
-              <a href="mailto:info@vidhyaworldwide.com" class="underline">info@vidhyaworldwide.com</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- hero image card -->
-        <div class="lg:w-5/12 w-full" data-aos="fade-left">
-          <div class="rounded-2xl overflow-hidden shadow-2xl glass border border-white/20">
-            <img src="assets/img/hero-product.jpg" alt="Assorted agro products" class="w-full h-80 object-cover" />
-            <div class="p-6">
-              <h3 class="text-xl font-semibold">Our Products — Fresh. Certified. Export-ready.</h3>
-              <p class="mt-2 text-sm text-slate-600">Bulk & container shipments | Custom packaging | Reliable logistics</p>
-              <div class="mt-4 flex gap-3">
-                <a href="#products" class="px-4 py-2 rounded-md bg-emerald-600 text-white text-sm">View Products</a>
-                <a href="#quality" class="px-4 py-2 rounded-md border border-slate-200 text-sm">Quality Management</a>
-              </div>
-            </div>
-          </div>
+          <h2 class="text-5xl font-bold leading-tight">Welcome to Vidhya Worldwide Pvt. Ltd.</h2>
+          <div class="text-xl font-semibold text-muted mt-2">- Cultivating Global Partnerships.</div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0">
+      <div class="text-center mb-4" data-aos="fade-up">
+        <div class="text-3xl font-bold">Who We Are</div>
+
+        <div class="text-2xl font-semibold text-brand mt-2">
+          Rooted in Quality. Growing Through Trust.
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 lg:px-0 mt-4">
         <div class="grid lg:grid-cols-2 gap-8 items-center">
           <div data-aos="fade-up">
-            <h2 class="text-2xl font-bold">Get to know about us</h2>
-            <p class="mt-3 text-slate-600 max-w-xl">
-              Vidhya Worldwide Pvt. Ltd. connects India's agricultural heritage with global markets. With four decades of combined experience in sourcing, logistics, and export compliance, we deliver consistent quality and timely shipments across continents.
+            <p class="text-lg">
+              Founded with a vision to bring India's finest agro products to the world, We have established itself as a respected player in the international agri-trade market.
             </p>
-
-            <div class="mt-6 grid sm:grid-cols-2 gap-4">
-              <div class="p-4 rounded-lg border border-slate-100">
-                <h4 class="font-semibold">Mission</h4>
-                <p class="text-sm text-slate-600 mt-1">Deliver premium Indian produce globally with integrity and sustainability.</p>
-              </div>
-              <div class="p-4 rounded-lg border border-slate-100">
-                <h4 class="font-semibold">Vision</h4>
-                <p class="text-sm text-slate-600 mt-1">To be a globally recognized exporter known for uncompromised quality.</p>
-              </div>
-            </div>
-
-            <div class="mt-6 flex gap-3">
-              <a href="#contact" class="px-4 py-2 rounded-md bg-emerald-600 text-white">Request Quote</a>
-              <a href="assets/img/catalogue.pdf" class="px-4 py-2 rounded-md border border-emerald-600 text-emerald-600" download>Download Catalogue</a>
-            </div>
+            <p class="text-lg mt-4">
+              Our team of professionals combines more than 4 decades of experience in agriculture, logistics, and global trade, ensuring seamless supply chain management from farm to destination port.
+            </p>
           </div>
-
           <div class="relative" data-aos="zoom-in">
-            <img src="assets/img/about-farm.jpg" alt="Farm sourcing" class="rounded-2xl shadow-lg w-full h-[420px] object-cover" />
+            <img src="assets/img/about-farm.jpg" alt="Who we are" class="rounded-2xl shadow-lg w-full h-[420px] object-cover" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- WHY CHOOSE US / Key values -->
-    <section class="py-14 bg-slate-50">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0">
-        <h3 class="text-lg text-emerald-700 font-semibold text-center" data-aos="fade-up">Why Choose Vidhya Worldwide</h3>
-        <p class="text-center text-slate-600 mt-2 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="80">
-          Transparent dealings, competitive pricing, strong logistics, and strict quality control ensure trust and timely deliveries.
-        </p>
+    <section class="py-20 bg-gradient-to-b from-emerald-50 via-white to-slate-50">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-emerald-700" data-aos="fade-up">
+            Why Choose <span class="text-emerald-600">Vidhya Worldwide</span>
+          </h2>
+          <p class="mt-4 text-slate-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="80">
+            Transparent dealings, competitive pricing, strong logistics, and strict quality control ensure trust and timely deliveries.
+          </p>
+        </div>
 
-        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-6 bg-white rounded-xl shadow-sm" data-aos="fade-up">
-            <div class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-emerald-50 text-emerald-600">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l2-2 4 4 8-8 4 4"/></svg>
-            </div>
-            <h4 class="mt-4 font-semibold">Quality Assurance</h4>
-            <p class="text-sm text-slate-600 mt-2">ISO, HACCP, FSSAI compliance; third-party testing and multi-stage inspection.</p>
+        <!-- Mission, Vision, Values -->
+        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up">
+          <div class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">Our Mission</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              To deliver premium Indian agricultural products to the global market with integrity, efficiency, and sustainability at the core of every operation.
+            </p>
           </div>
 
-          <div class="p-6 bg-white rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="40">
-            <div class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-emerald-50 text-emerald-600">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l2-2 4 4 8-8 4 4"/></svg>
-            </div>
-            <h4 class="mt-4 font-semibold">Global Reach</h4>
-            <p class="text-sm text-slate-600 mt-2">Shipments to USA, UK, Middle East, Africa, Far East, and new markets across the world.</p>
+          <div class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">Our Vision</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              To be a globally recognized exporter known for uncompromised quality, ethical trade practices, and long-term partnerships.
+            </p>
           </div>
 
-          <div class="p-6 bg-white rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="80">
-            <div class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-emerald-50 text-emerald-600">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l2-2 4 4 8-8 4 4"/></svg>
-            </div>
-            <h4 class="mt-4 font-semibold">Sustainable Sourcing</h4>
-            <p class="text-sm text-slate-600 mt-2">Fair trade practices and eco-friendly sourcing to protect farm communities.</p>
-          </div>
-
-          <div class="p-6 bg-white rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="120">
-            <div class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-emerald-50 text-emerald-600">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l2-2 4 4 8-8 4 4"/></svg>
-            </div>
-            <h4 class="mt-4 font-semibold">Reliable Logistics</h4>
-            <p class="text-sm text-slate-600 mt-2">Efficient planning and partners ensure on-time deliveries and safe handling.</p>
+          <div class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">Our Values</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              We values Integrity, Quality, Sustainability, and Reliability, ensuring transparent, ethical trade, uncompromised standards, eco-friendly sourcing, and timely global deliveries.
+            </p>
           </div>
         </div>
       </div>
@@ -223,94 +197,88 @@
 
     <!-- PRODUCTS -->
     <section id="products" class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0">
-        <div class="flex items-center justify-between">
-          <div>
-            <h2 class="text-2xl font-bold" data-aos="fade-up">Products</h2>
-            <p class="text-sm text-slate-600 mt-1">Grains, Pulses, Spices, Oil Seeds and Processed produce for global buyers.</p>
-          </div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-0">
+        <div class="flex items-center justify-center flex-wrap gap-4 flex-col">
+          <div class="text-3xl font-bold"  data-aos="fade-up">Premium Agro Products from India</div>
 
-          <div class="flex gap-3 items-center" data-aos="fade-up" data-aos-delay="40">
-            <button class="px-3 py-2 rounded-md border category-btn category-active text-sm" data-cat="all">All</button>
-            <button class="px-3 py-2 rounded-md border category-btn text-sm" data-cat="grains">Grains & Pulses</button>
-            <button class="px-3 py-2 rounded-md border category-btn text-sm" data-cat="spices">Spices</button>
-            <button class="px-3 py-2 rounded-md border category-btn text-sm" data-cat="oil">Oil Seeds</button>
-          </div>
+          <p class="px-8 mx-8 mt-2 mb-4 text-slate-600 text-center">
+            We offers a wide range of agricultural commodities sourced from India's most fertile regions. Every product is carefully selected, processed, and packaged to meet internationa export standards.
+          </p>
         </div>
 
-        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Product Card -->
-          <article class="product-item border rounded-xl overflow-hidden shadow-sm" data-cat="grains" data-aos="fade-up">
-            <div class="w-full h-44 overflow-hidden">
-              <img src="assets/img/products/basmati.jpg" alt="Basmati rice" class="img-cover h-44 w-full" />
+        <div class="my-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Grains & Pulses -->
+          <article class="product-item border rounded-xl overflow-hidden shadow-lg" data-cat="grains" data-aos="fade-up">
+            <div class="w-full product-img overflow-hidden">
+              <img src="assets/img/grains-pulses.jpg" alt="Grains and Pulses" class="img-cover product-img w-full" />
             </div>
-            <div class="p-4">
-              <h4 class="font-semibold">Basmati Rice</h4>
-              <p class="text-sm text-slate-600 mt-2">Fragrant, long-grain basmati suitable for retail and bulk export.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="text-sm text-slate-500">Packaging: 25kg / 50kg</span>
-                <a href="#contact" class="text-emerald-600 text-sm">Request Quote</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-item border rounded-xl overflow-hidden shadow-sm" data-cat="grains" data-aos="fade-up" data-aos-delay="40">
-            <div class="w-full h-44 overflow-hidden">
-              <img src="assets/img/products/kabuli-chana.jpg" alt="Chana" class="img-cover h-44 w-full" />
-            </div>
-            <div class="p-4">
-              <h4 class="font-semibold">Kabuli Chana</h4>
-              <p class="text-sm text-slate-600 mt-2">Premium chickpeas, sorted & graded for export markets.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="text-sm text-slate-500">MOQ: 1 MT</span>
-                <a href="#contact" class="text-emerald-600 text-sm">Request Quote</a>
-              </div>
+            <div class="px-4 py-3">
+              <h4 class="font-semibold text-xl">Grains & Pulses</h4>
+              <p class="text-sm text-slate-600 mt-2">We supply premium-quality grains and pulses sourced directly from trusted Indian farmers, ideal for food industries and bulk buyers.</p>
+              <ul class="text-slate-700 mt-3 list-disc list-inside">
+                <li>Kabuli Chana (Chickpeas)</li>
+                <li>Millets (Bajra, Ragi, Jowar)</li>
+                <li>Pulses</li>
+                <li>Wheat</li>
+                <li>Maize (Corn)</li>
+                <li>Barley</li>
+                <li>Oats</li>
+              </ul>
             </div>
           </article>
 
-          <article class="product-item border rounded-xl overflow-hidden shadow-sm" data-cat="spices" data-aos="fade-up" data-aos-delay="80">
-            <div class="w-full h-44 overflow-hidden">
-              <img src="assets/img/products/cumin-seeds.jpg" alt="Cumin seeds" class="img-cover h-44 w-full" />
+          <!-- Rice -->
+          <article class="product-item border rounded-xl overflow-hidden shadow-lg" data-cat="rice" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-full product-img overflow-hidden">
+              <img src="assets/img/rice.jpg" alt="Rice varieties" class="img-cover product-img w-full" />
             </div>
-            <div class="p-4">
-              <h4 class="font-semibold">Cumin Seeds</h4>
-              <p class="text-sm text-slate-600 mt-2">Aromatic cumin sourced from trusted farmers — ideal for bulk buyers.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="text-sm text-slate-500">Cert: FSSAI</span>
-                <a href="#contact" class="text-emerald-600 text-sm">Request Quote</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Repeat or add more product cards as required -->
-          <article class="product-item border rounded-xl overflow-hidden shadow-sm" data-cat="oil" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-full h-44 overflow-hidden">
-              <img src="assets/img/products/sesame.jpg" alt="Sesame seeds" class="img-cover h-44 w-full" />
-            </div>
-            <div class="p-4">
-              <h4 class="font-semibold">Sesame Seeds</h4>
-              <p class="text-sm text-slate-600 mt-2">High-quality sesame seeds for food and oil processing industries.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="text-sm text-slate-500">MOQ: 500kg</span>
-                <a href="#contact" class="text-emerald-600 text-sm">Request Quote</a>
-              </div>
+            <div class="px-4 py-3">
+              <h4 class="font-semibold text-xl">Rice</h4>
+              <p class="text-sm text-slate-600 mt-2">We deal in a variety of aromatic and non-aromatic Indian rice types, processed with care for international markets.</p>
+              <ul class="text-slate-700 mt-3 list-disc list-inside">
+                <li>Traditional Basmati</li>
+                <li>Sharbati Basmati</li>
+                <li>Sugandha Basmati</li>
+                <li>All type of Basmati Rice</li>
+                <li>All type of Non-Basmati Rice</li>
+              </ul>
             </div>
           </article>
 
-          <article class="product-item border rounded-xl overflow-hidden shadow-sm" data-cat="spices" data-aos="fade-up" data-aos-delay="120">
-            <div class="w-full h-44 overflow-hidden">
-              <img src="assets/img/products/turmeric.jpg" alt="Turmeric" class="img-cover h-44 w-full" />
+          <!-- Cattle Feed -->
+          <article class="product-item border rounded-xl overflow-hidden shadow-lg" data-cat="cattleFeed" data-aos="fade-up" data-aos-delay="60">
+            <div class="w-full product-img overflow-hidden">
+              <img src="assets/img/cattle-feed.jpeg" alt="Cattle Feed" class="img-cover product-img w-full" />
             </div>
-            <div class="p-4">
-              <h4 class="font-semibold">Turmeric</h4>
-              <p class="text-sm text-slate-600 mt-2">High-curcumin turmeric, cleaned and graded for export.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="text-sm text-slate-500">Cert: Organic available</span>
-                <a href="#contact" class="text-emerald-600 text-sm">Request Quote</a>
-              </div>
+            <div class="px-4 py-3">
+              <div class="font-semibold text-lg">Cattle Feed</div>
+              <p class="text-sm text-slate-600 mt-2">Our nutrient-rich cattle feed products ensure better milk yield and animal health, meeting international feed standards.</p>
+              <ul class="text-slate-700 mt-3 list-disc list-inside">
+                <li>Rice DDGS</li>
+                <li>Corn DDGS</li>
+                <li>Soya (DOC)</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Fruits -->
+          <article class="product-item border rounded-xl overflow-hidden shadow-lg" data-cat="fruits" data-aos="fade-up" data-aos-delay="140">
+            <div class="w-full product-img overflow-hidden">
+              <img src="assets/img/fruits.jpg" alt="Fresh Fruits" class="img-cover product-img w-full" />
+            </div>
+            <div class="px-4 py-3">
+              <h4 class="font-semibold text-xl">Fruits</h4>
+              <p class="text-sm text-slate-600 mt-2">We export fresh, naturally ripened Indian fruits known for their quality, taste, and shelf-life — carefully graded and packed.</p>
+              <ul class="text-slate-700 mt-3 list-disc list-inside">
+                <li>Banana</li>
+                <li>Others upon request</li>
+              </ul>
             </div>
           </article>
         </div>
+      </div>
+      <div class="mt-5 flex align-center justify-center">
+        <a href="#contact" class="px-4 py-2 rounded-md bg-brand text-white">Request Quote</a>
       </div>
     </section>
 
@@ -318,50 +286,24 @@
     <section id="quality" class="py-16 bg-slate-50">
       <div class="max-w-6xl mx-auto px-6 lg:px-0 grid lg:grid-cols-2 gap-8 items-center">
         <div data-aos="fade-right">
-          <h3 class="text-2xl font-bold">Quality Management</h3>
-          <p class="mt-3 text-slate-600">Quality control is a promise — not a step. From direct sourcing, multi-stage inspections, advanced packaging to third-party lab checks — we ensure every shipment meets the highest industry standards.</p>
+          <div class="text-3xl font-bold">Quality That Speaks for Itself </div>
 
-          <ul class="mt-6 space-y-3 text-sm text-slate-600">
-            <li>• Direct sourcing from certified farms and suppliers</li>
-            <li>• Multi-stage inspection and grading process</li>
-            <li>• Advanced packaging to preserve freshness</li>
-            <li>• ISO, HACCP, FSSAI compliance and third-party testing</li>
+          <p class="my-4 text-slate-600">At <span class="font-bold">Vidhya Worldwide Pvt. Ltd.</span> quality control is not a process — it's a promise. We follow strict international standards at every stage of procurement, storage, processing, and export.</p>
+
+          <div class="text-xl font-bold">Our Quality Assurance Practices</div>
+          <ul class="mb-5 mt-2 space-y-1 text-slate-600 list-disc list-inside">
+            <li>Direct sourcing from certified farms, suppliers, manufacturers</li> 
+            <li>Multi-stage inspection and grading</li>
+            <li>Advanced packaging to preserve freshness</li>
+            <li>Compliance with ISO, HACCP, and FSSAI standards</li>
+            <li>Third-party lab testing for purity and safety </li>
           </ul>
 
-          <div class="mt-6">
-            <a href="#certs" class="px-4 py-2 rounded-md bg-emerald-600 text-white">View Certifications</a>
-          </div>
+          <p class="mt-3 text-slate-600">Our commitment to excellence ensures that every consignment meets the highest benchmarks for taste, texture, and safety — earning us the trust of global importers and trade partners.</p>
         </div>
 
         <div data-aos="zoom-in">
-          <img src="assets/img/quality-lab.jpg" alt="Quality lab" class="rounded-2xl shadow-lg w-full h-96 object-cover" />
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certs" class="py-12 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-0">
-        <h3 class="text-xl font-bold" data-aos="fade-up">Certifications & Compliance</h3>
-        <p class="text-sm text-slate-600 mt-1" data-aos="fade-up" data-aos-delay="40">We follow global standards and maintain records for audits & buyer verification.</p>
-
-        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-4 border rounded-lg text-center" data-aos="fade-up">
-            <img src="assets/img/certs/iso.png" alt="ISO" class="mx-auto h-16" />
-            <p class="text-sm text-slate-600 mt-3">ISO Certified</p>
-          </div>
-          <div class="p-4 border rounded-lg text-center" data-aos="fade-up" data-aos-delay="40">
-            <img src="assets/img/certs/haccp.png" alt="HACCP" class="mx-auto h-16" />
-            <p class="text-sm text-slate-600 mt-3">HACCP</p>
-          </div>
-          <div class="p-4 border rounded-lg text-center" data-aos="fade-up" data-aos-delay="80">
-            <img src="assets/img/certs/fssai.png" alt="FSSAI" class="mx-auto h-16" />
-            <p class="text-sm text-slate-600 mt-3">FSSAI</p>
-          </div>
-          <div class="p-4 border rounded-lg text-center" data-aos="fade-up" data-aos-delay="120">
-            <img src="assets/img/certs/thirdparty.png" alt="Third-party lab" class="mx-auto h-16" />
-            <p class="text-sm text-slate-600 mt-3">Third-party Lab Tested</p>
-          </div>
+          <img src="assets/img/quality.jpeg" alt="Quality lab" class="rounded-2xl shadow-xl w-full h-96 object-cover border" />
         </div>
       </div>
     </section>
@@ -372,9 +314,11 @@
         <div class="grid lg:grid-cols-2 gap-8">
           <div data-aos="fade-up">
             <h3 class="text-2xl font-bold">Contact Us</h3>
-            <p class="text-slate-600 mt-2">Partner with us for your agro import & export needs. We provide quotations, product specs and logistics support tailored to your business.</p>
+            <p class="text-sm text-slate-600 mt-2">Partner with us for your agro import and export needs. Our team will be happy to provide quotations, product details, and logistics support tailored to your business.</p>
 
             <div class="mt-6 space-y-4">
+              <h4 class="text-xl font-bold">Vidhya Worldwide Pvt. Ltd.</h4>
+
               <div class="p-4 rounded-lg bg-white border">
                 <h4 class="font-semibold">Head Office</h4>
                 <p class="text-sm text-slate-600 mt-1">Indore, Madhya Pradesh, India</p>
@@ -382,45 +326,46 @@
 
               <div class="p-4 rounded-lg bg-white border">
                 <h4 class="font-semibold">Phone</h4>
-                <p class="text-sm text-slate-600 mt-1">+91 9826054282</p>
+                <p class="text-sm text-slate-600 mt-1">
+                  <a href="tel:+91 9826054282" class="hover:underline">+91 9826054282</a>
+                </p>
               </div>
 
               <div class="p-4 rounded-lg bg-white border">
                 <h4 class="font-semibold">Email</h4>
-                <p class="text-sm text-slate-600 mt-1"><a href="mailto:info@vidhyaworldwide.com" class="underline">info@vidhyaworldwide.com</a></p>
+                <p class="text-sm text-slate-600 mt-1">
+                  <a href="mailto:info@vidhyaworldwide.com" class="hover:underline">info@vidhyaworldwide.com</a>
+                </p>
               </div>
-            </div>
-
-            <div class="mt-6">
-              <iframe class="w-full rounded-lg h-48 border" src="https://www.google.com/maps/embed?pb=!1m18..." aria-hidden="false" loading="lazy"></iframe>
             </div>
           </div>
 
+          <!-- Form -->
           <div data-aos="fade-up" data-aos-delay="40">
             <form id="contact-form" class="space-y-4 bg-white p-6 rounded-xl border">
               <div>
-                <label class="text-sm font-medium">Your Name</label>
+                <label class="text-sm font-medium">Full Name</label>
                 <input type="text" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Full name" required />
               </div>
 
               <div>
                 <label class="text-sm font-medium">Email</label>
-                <input type="email" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="you@example.com" required/>
+                <input type="email" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Email" required/>
               </div>
 
               <div>
                 <label class="text-sm font-medium">Phone</label>
-                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="+91 98xxxx" />
+                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Phone" />
               </div>
 
               <div>
                 <label class="text-sm font-medium">Message</label>
-                <textarea class="mt-2 w-full rounded-md border px-3 py-2" rows="5" placeholder="Tell us about your requirements" required></textarea>
+                <textarea class="mt-2 w-full rounded-md border px-3 py-2" rows="5" placeholder="Tell us about your requirements" required maxlength="500"></textarea>
               </div>
 
               <div class="flex items-center justify-between">
                 <div class="text-sm text-slate-500">We'll never share your details.</div>
-                <button type="submit" class="px-4 py-2 bg-emerald-600 text-white rounded-md">Send Message</button>
+                <button type="submit" class="px-4 py-2 bg-brand text-white rounded-md">Send Message</button>
               </div>
 
               <!-- Note: this is a static form. Hook to backend/email service for production. -->
