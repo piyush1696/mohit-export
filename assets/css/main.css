@@ -11,7 +11,13 @@ html, body {
 
 .brand-logo {
   object-fit: cover;
-  width: 100px;
+  width: 130px;
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 90px;
+  }
 }
 
 .bg-primary {
