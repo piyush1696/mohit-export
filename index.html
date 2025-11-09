@@ -10,90 +10,39 @@
   <!-- Tailwind via CDN (good for prototypes/static pages) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Custom CSS -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
   <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <script src="assets/vendor/aos/aos.js"></script>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.css" integrity="sha512-..." crossorigin="anonymous" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <style>
-    /* Minor custom styles */
-    :root {
-      --brand-500: #005e50; /* deep green */
-      --brand-600: #0a5e44;
-      --muted: #6b7280;
-    }
-
-    .bg-brand {
-      --tw-bg-opacity: 1;
-      background-color: var(--brand-500);
-    }
-
-    .product-img {
-      height: 15rem;
-    }
-
-    .border-brand {
-      --tw-border-opacity: 1;
-      border-color: var(--brand-500);
-    }
-
-    .text-brand {
-      --tw-text-opacity: 1;
-      color: var(--brand-500);
-    }
-
-    /* gradient overlay on hero */
-    .hero-bg {
-      background-image: linear-gradient(180deg, rgba(7,10,9,0.35), rgba(7,10,9,0.55)), url('assets/img/hero-carousel/hero-carousel-1.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* subtle glass for cards */
-    .glass {
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(6px);
-    }
-
-    /* product category pill active */
-    .category-active {
-      background: var(--brand-500);
-      color: white;
-    }
-
-    /* simple fade-in for images */
-    .img-cover { object-fit: cover; width:100%; height:100%; }
-  </style>
 </head>
 <body class="antialiased text-slate-800">
-
   <!-- NAV -->
   <header class="sticky w-full z-40 bg-white/70 backdrop-blur-sm shadow-sm">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-2">
       <a href="#" class="flex items-center gap-3">
-        <img src="assets/img/logo.png" alt="Vidhya Worldwide Logo" class="h-10 w-10 object-contain" />
+        <img src="assets/img/logo.png" alt="Vidhya Worldwide Logo" class="brand-logo" />
         <div>
-          <h1 class="text-lg font-extrabold leading-tight">Vidhya Worldwide</h1>
-          <p class="text-xs text-slate-500 -mt-1">Premium Indian Agro Exports</p>
+          <div class="text-3xl font-extrabold text-primary">Vidhya Worldwide</div>
+          <p class="font-medium text-secondary mb-0">Premium Indian Agro Exports</p>
         </div>
       </a>
 
-      <nav id="main-nav" class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#hero" class="hover:text-emerald-700">Home</a>
-        <a href="#about" class="hover:text-emerald-700">Who we are</a>
-        <a href="#products" class="hover:text-emerald-700">Products</a>
-        <a href="#quality" class="hover:text-emerald-700">Quality</a>
-        <a href="#contact" class="hover:text-emerald-700">Contact</a>
+      <nav id="main-nav" class="hidden md:flex items-end gap-6 text-lg font-medium">
+        <a href="#hero" class="text-nav">Home</a>
+        <a href="#about" class="text-nav">Who we are</a>
+        <a href="#products" class="text-nav">Products</a>
+        <a href="#quality" class="text-nav">Quality</a>
+        <a href="#contact" class="text-nav">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="tel:+919826054282" class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-md border border-slate-200">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h4l2 5v6l3 3 5-2V7l2-5h4"/></svg>
-          <span class="text-sm text-slate-700">+91 9826054282</span>
-        </a>
-
+      <div class="flex items-center gap-3 md:hidden">
         <!-- Mobile menu button -->
         <button id="btn-mobile" class="md:hidden p-2 rounded-md hover:bg-slate-100">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,25 +55,22 @@
     <!-- Mobile nav panel -->
     <div id="mobile-panel" class="md:hidden hidden border-t border-slate-100 bg-white">
       <div class="p-4 space-y-3">
-        <a href="#hero" class="block">Home</a>
-        <a href="#about" class="block">Who we are</a>
-        <a href="#products" class="block">Products</a>
-        <a href="#quality" class="block">Quality</a>
-        <a href="#certs" class="block">Certifications</a>
-        <a href="#contact" class="block">Contact</a>
-        <a href="assets/img/catalogue.pdf" class="block text-emerald-700">Download Catalogue</a>
+        <a href="#hero" class="text-nav block">Home</a>
+        <a href="#about" class="text-nav block">Who we are</a>
+        <a href="#products" class="text-nav block">Products</a>
+        <a href="#quality" class="text-nav block">Quality</a>
+        <a href="#contact" class="text-nav block">Contact</a>
       </div>
     </div>
   </header>
 
+  <!-- PAGE CONTENT -->
   <main>
-
-    <!-- HERO -->
-    <section id="hero" class="hero-bg min-h-[70vh] flex items-center">
+    <!-- Brand -->
+    <section id="hero" class="brand-bg-cover min-h-[70vh] flex items-center">
       <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
         <div class="lg:w-6/12 text-white" data-aos="fade-right">
-          <h2 class="text-5xl font-bold leading-tight">Welcome to Vidhya Worldwide Pvt. Ltd.</h2>
-          <div class="text-xl font-semibold text-muted mt-2">- Cultivating Global Partnerships.</div>
+          <h2 class="text-5xl font-bold leading-tight">DELIVERS THE AUTHENTIC TASTE OF INDIAN AGRO PRODUCTS ACROSS THE GLOBE </h2>
         </div>
       </div>
     </section>
@@ -134,7 +80,7 @@
       <div class="text-center mb-4" data-aos="fade-up">
         <div class="text-3xl font-bold">Who We Are</div>
 
-        <div class="text-2xl font-semibold text-brand mt-2">
+        <div class="text-2xl font-semibold text-primary mt-2">
           Rooted in Quality. Growing Through Trust.
         </div>
       </div>
@@ -149,7 +95,7 @@
               Our team of professionals combines more than 4 decades of experience in agriculture, logistics, and global trade, ensuring seamless supply chain management from farm to destination port.
             </p>
           </div>
-          <div class="relative" data-aos="zoom-in">
+          <div class="relative hidden md:block" data-aos="zoom-in">
             <img src="assets/img/about-farm.jpg" alt="Who we are" class="rounded-2xl shadow-lg w-full h-[420px] object-cover" />
           </div>
         </div>
@@ -160,9 +106,9 @@
     <section class="py-20 bg-gradient-to-b from-emerald-50 via-white to-slate-50">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <!-- Header -->
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-emerald-700" data-aos="fade-up">
-            Why Choose <span class="text-emerald-600">Vidhya Worldwide</span>
+        <div class="text-center mb-5">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary" data-aos="fade-up">
+            Why Choose <span class="text-secondary">Vidhya Worldwide</span>
           </h2>
           <p class="mt-4 text-slate-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="80">
             Transparent dealings, competitive pricing, strong logistics, and strict quality control ensure trust and timely deliveries.
@@ -170,38 +116,34 @@
         </div>
 
         <!-- Mission, Vision, Values -->
-        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up">
-          <div class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
+        <div class="overflow-x-auto flex justify-center gap-6 py-4" data-aos="fade-up">
+          <div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
             <h3 class="text-xl font-semibold text-emerald-700 mb-3">Our Mission</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               To deliver premium Indian agricultural products to the global market with integrity, efficiency, and sustainability at the core of every operation.
             </p>
           </div>
 
-          <div class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
+          <div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
             <h3 class="text-xl font-semibold text-emerald-700 mb-3">Our Vision</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               To be a globally recognized exporter known for uncompromised quality, ethical trade practices, and long-term partnerships.
             </p>
           </div>
-
-          <div class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-emerald-700 mb-3">Our Values</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              We values Integrity, Quality, Sustainability, and Reliability, ensuring transparent, ethical trade, uncompromised standards, eco-friendly sourcing, and timely global deliveries.
-            </p>
-          </div>
         </div>
+
       </div>
     </section>
 
     <!-- PRODUCTS -->
     <section id="products" class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-6 lg:px-0">
-        <div class="flex items-center justify-center flex-wrap gap-4 flex-col">
-          <div class="text-3xl font-bold"  data-aos="fade-up">Premium Agro Products from India</div>
+        <div class="flex items-center justify-center flex-wrap gap-4 flex-col" data-aos="fade-up">
+          <div class="section-heading">
+            Premium Agro Products
+          </div>
 
-          <p class="px-8 mx-8 mt-2 mb-4 text-slate-600 text-center">
+          <p class="px-8 mx-8 mt-2 mb-4 text-slate-600 hidden md:block">
             We offers a wide range of agricultural commodities sourced from India's most fertile regions. Every product is carefully selected, processed, and packaged to meet internationa export standards.
           </p>
         </div>
@@ -228,7 +170,7 @@
           </article>
 
           <!-- Rice -->
-          <article class="product-item border rounded-xl overflow-hidden shadow-lg" data-cat="rice" data-aos="fade-up" data-aos-delay="100">
+          <article class="product-item border rounded-xl overflow-hidden shadow-lg" data-cat="rice" data-aos="fade-up">
             <div class="w-full product-img overflow-hidden">
               <img src="assets/img/rice.jpg" alt="Rice varieties" class="img-cover product-img w-full" />
             </div>
@@ -277,8 +219,9 @@
           </article>
         </div>
       </div>
+
       <div class="mt-5 flex align-center justify-center">
-        <a href="#contact" class="px-4 py-2 rounded-md bg-brand text-white">Request Quote</a>
+        <a href="#contact" class="px-4 py-2 rounded-md bg-primary text-white">Request Quote</a>
       </div>
     </section>
 
@@ -302,7 +245,7 @@
           <p class="mt-3 text-slate-600">Our commitment to excellence ensures that every consignment meets the highest benchmarks for taste, texture, and safety — earning us the trust of global importers and trade partners.</p>
         </div>
 
-        <div data-aos="zoom-in">
+        <div data-aos="zoom-in" class="hidden md:block">
           <img src="assets/img/quality.jpeg" alt="Quality lab" class="rounded-2xl shadow-xl w-full h-96 object-cover border" />
         </div>
       </div>
@@ -311,81 +254,124 @@
     <!-- CONTACT -->
     <section id="contact" class="py-16 bg-emerald-50/5">
       <div class="max-w-6xl mx-auto px-6 lg:px-0">
-        <div class="grid lg:grid-cols-2 gap-8">
-          <div data-aos="fade-up">
-            <h3 class="text-2xl font-bold">Contact Us</h3>
-            <p class="text-sm text-slate-600 mt-2">Partner with us for your agro import and export needs. Our team will be happy to provide quotations, product details, and logistics support tailored to your business.</p>
+        <div class="grid lg:grid-cols-2 gap-10">
+          
+          <!-- Left Section - Our Values -->
+          <div data-aos="fade-up" class="relative bg-white p-8 rounded-xl border shadow-sm">
+            <div class="absolute -top-6 -left-6 w-16 h-16 bg-primary/10 rounded-full blur-2xl"></div>
 
-            <div class="mt-6 space-y-4">
-              <h4 class="text-xl font-bold">Vidhya Worldwide Pvt. Ltd.</h4>
+            <div class="text-left">
+              <h2 class="text-3xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                Our Values
+              </h2>
+              <p class="text-md text-slate-600 mb-6 leading-relaxed">
+                We uphold <span class="font-semibold text-primary">Integrity</span>, 
+                <span class="font-semibold text-primary">Quality</span>, 
+                <span class="font-semibold text-primary">Sustainability</span>, and 
+                <span class="font-semibold text-primary">Reliability</span> — ensuring ethical trade, uncompromised standards, and consistent global deliveries.
+              </p>
+            </div>
 
-              <div class="p-4 rounded-lg bg-white border">
-                <h4 class="font-semibold">Head Office</h4>
-                <p class="text-sm text-slate-600 mt-1">Indore, Madhya Pradesh, India</p>
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg">
+                  <i class="fa fa-bullseye"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-800">Integrity</h4>
+                  <p class="text-slate-600 text-sm">We build trust through transparency and accountability.</p>
+                </div>
               </div>
 
-              <div class="p-4 rounded-lg bg-white border">
-                <h4 class="font-semibold">Phone</h4>
-                <p class="text-sm text-slate-600 mt-1">
-                  <a href="tel:+91 9826054282" class="hover:underline">+91 9826054282</a>
-                </p>
+              <div class="flex items-start gap-4">
+                <div class="h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg">
+                  <i class="fa fa-bullseye"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-800">Quality</h4>
+                  <p class="text-slate-600 text-sm">We never compromise on product standards and excellence.</p>
+                </div>
               </div>
 
-              <div class="p-4 rounded-lg bg-white border">
-                <h4 class="font-semibold">Email</h4>
-                <p class="text-sm text-slate-600 mt-1">
-                  <a href="mailto:info@vidhyaworldwide.com" class="hover:underline">info@vidhyaworldwide.com</a>
-                </p>
+              <div class="flex items-start gap-4">
+                <div class="h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg">
+                  <i class="fa fa-bullseye"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-800">Sustainability</h4>
+                  <p class="text-slate-600 text-sm">We support eco-friendly sourcing and fair trade practices.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg">
+                  <i class="fa fa-bullseye"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-800">Reliability</h4>
+                  <p class="text-slate-600 text-sm">We deliver what we promise — on time, every time.</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Form -->
+          <!-- Right Section - Form -->
           <div data-aos="fade-up" data-aos-delay="40">
-            <form id="contact-form" class="space-y-4 bg-white p-6 rounded-xl border">
+            <form id="contact-form" class="space-y-4 bg-white p-6 rounded-xl border shadow-sm">
               <div>
                 <label class="text-sm font-medium">Full Name</label>
-                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Full name" required />
+                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2 focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none" placeholder="Full name" required />
               </div>
 
               <div>
                 <label class="text-sm font-medium">Email</label>
-                <input type="email" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Email" required/>
+                <input type="email" class="mt-2 w-full rounded-md border px-3 py-2 focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none" placeholder="Email" required />
               </div>
 
               <div>
                 <label class="text-sm font-medium">Phone</label>
-                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Phone" />
+                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2 focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none" placeholder="Phone" />
               </div>
 
               <div>
                 <label class="text-sm font-medium">Message</label>
-                <textarea class="mt-2 w-full rounded-md border px-3 py-2" rows="5" placeholder="Tell us about your requirements" required maxlength="500"></textarea>
+                <textarea class="mt-2 w-full rounded-md border px-3 py-2 focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none" rows="5" placeholder="Tell us about your requirements" required maxlength="500"></textarea>
               </div>
 
-              <div class="flex items-center justify-between">
-                <div class="text-sm text-slate-500">We'll never share your details.</div>
-                <button type="submit" class="px-4 py-2 bg-brand text-white rounded-md">Send Message</button>
+              <div class="flex flex-col-reverse md:flex-row items-center justify-between space-y-2 md:space-y-0">
+                <div class="text-sm text-slate-500 mt-3 md:mt-0">We'll never share your details.</div>
+                <button type="submit" class="px-5 py-2 bg-primary hover:bg-primary/90 transition text-white rounded-md shadow-sm">Send Message</button>
               </div>
-
-              <!-- Note: this is a static form. Hook to backend/email service for production. -->
             </form>
           </div>
+
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-white border-t mt-12">
-    <div class="max-w-6xl mx-auto px-6 lg:px-0 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-sm text-slate-600">© <strong>Vidhya Worldwide Pvt. Ltd.</strong> — All Rights Reserved</div>
-      <div class="flex items-center gap-4 text-sm text-slate-600">
-        <a href="#contact">Contact</a>
-        <a href="assets/img/catalogue.pdf" download>Catalogue</a>
-        <a href="#certs">Certifications</a>
+  <footer class="border-t bg-primary text-white py-4 px-6 md:px-0">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-6 text-sm">
+      
+      <!-- Company Info -->
+      <div>
+        <strong>Vidhya Worldwide Pvt. Ltd.</strong><br>
+        © All Rights Reserved
       </div>
+      
+      <!-- Head Office -->
+      <div>
+        <strong>Head Office:</strong> <br/>
+        <a href="https://www.google.co.in/maps/place/Indore,+Madhya+Pradesh" target="_blank" class="hover:underline">Indore, Madhya Pradesh, India</a>
+      </div>
+      
+      <!-- Contact -->
+      <div class="flex flex-col gap-1">
+        <div><strong>Phone:</strong> <a href="tel:+919826054282" class="hover:underline">+91 9826054282</a></div>
+        <div><strong>Email:</strong> <a href="mailto:info@vidhyaworldwide.com" class="hover:underline">info@vidhyaworldwide.com</a></div>
+      </div>
+
     </div>
   </footer>
 
@@ -399,29 +385,6 @@
     const mobilePanel = document.getElementById('mobile-panel');
     btnMobile.addEventListener('click', () => {
       mobilePanel.classList.toggle('hidden');
-    });
-
-    // Category filter for products
-    document.querySelectorAll('.category-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const cat = btn.dataset.cat;
-        // visual active state
-        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('category-active'));
-        btn.classList.add('category-active');
-
-        // filter items
-        document.querySelectorAll('.product-item').forEach(item => {
-          if(cat === 'all' || item.dataset.cat === cat) {
-            item.style.display = '';
-            // refresh AOS for showing items
-            item.setAttribute('data-aos', 'fade-up');
-          } else {
-            item.style.display = 'none';
-            item.removeAttribute('data-aos');
-          }
-        });
-        AOS.refresh();
-      });
     });
 
     // Basic contact form behavior (client-side only)
@@ -441,6 +404,20 @@
         }
       });
     });
-  </script>
+  // </script>
+
+  <!--Start of Tawk.to Script-->
+  <!-- <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src=`https://embed.tawk.to/608f73125eb20e09cf38af7d/1f4o5j06e`;
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script> -->
+  <!--End of Tawk.to Script-->
 </body>
 </html>
