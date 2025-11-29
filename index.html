@@ -77,17 +77,32 @@
       </div>
     </section>
 
-    <!-- WHO WE ARE -->
-    <section id="about" class="py-16 bg-white">
+    <section id="home" class="pt-16 py-4 bg-white">
       <div class="max-w-7xl mx-auto px-6 lg:px-0 mb-4 aos-init aos-animate" data-aos="fade-up">
-        <div class="text-3xl font-bold">Who We Are</div>
+        <div class="text-3xl font-bold">About Us</div>
 
         <div class="text-2xl font-semibold">
           <span class="text-primary">Rooted in Quality.</span>
           <span class="block md:inline text-secondary">Growing Through Trust.</span>
         </div>
 
-        <div data-aos="fade-up" class="aos-init aos-animate mt-4">
+        <div data-aos="fade-up" class="aos-init aos-animate mt-1">
+          <p class="text-lg">
+            We connect India's rich agricultural heritage to global markets. As a trusted name in the import and export of premium agro products, we specialize in delivering quality, freshness, and consistency across borders.
+          </p>
+          <p class="text-lg">
+            With a strong network of farmers, processors, and logistics partners, we ensure that every shipment meets international standards for quality, sustainability, and reliability. Whether you're sourcing bulk commodities or niche agricultural produce, we are your dependable trade partner.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section id="about" class="py-4 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-0 mb-4 aos-init aos-animate" data-aos="fade-up">
+        <div class="text-3xl font-bold">Who We Are</div>
+
+        <div data-aos="fade-up" class="aos-init aos-animate mt-1">
           <p class="text-lg">
             Founded with a vision to bring India's finest agro products to the world, We have established itself as a respected player in the international agri-trade market.
           </p>
@@ -328,33 +343,7 @@
 
           <!-- Form -->
           <div data-aos="fade-up" data-aos-delay="40">
-            <form id="contact-form" class="space-y-4 bg-white p-6 rounded-xl border">
-              <div>
-                <label class="text-sm font-medium">Full Name</label>
-                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Full name" required />
-              </div>
-
-              <div>
-                <label class="text-sm font-medium">Email</label>
-                <input type="email" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Email" required/>
-              </div>
-
-              <div>
-                <label class="text-sm font-medium">Phone</label>
-                <input type="text" class="mt-2 w-full rounded-md border px-3 py-2" placeholder="Phone" />
-              </div>
-
-              <div>
-                <label class="text-sm font-medium">Message</label>
-                <textarea class="mt-2 w-full rounded-md border px-3 py-2" rows="5" placeholder="Tell us about your requirements" required maxlength="500"></textarea>
-              </div>
-
-              <div class="flex items-center justify-between">
-                <button type="submit" class="px-4 py-2 bg-primary text-white rounded-md">Send Message</button>
-              </div>
-
-              <!-- Note: this is a static form. Hook to backend/email service for production. -->
-            </form>
+            <iframe src="./iframe/contact-form.html" id="contact-form-wrapper" scrolling="no" width="100%" height="400px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           </div>
         </div>
       </div>
@@ -383,13 +372,6 @@
       mobilePanel.classList.toggle('hidden');
     });
 
-    // Basic contact form behavior (client-side only)
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('This is a static prototype. To enable form submissions, connect this form to an email/API endpoint.');
-      this.reset();
-    });
-
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
@@ -400,6 +382,61 @@
         }
       });
     });
+
+    window.onload = function() {
+      adjustIframeHeight();
+    };
+
+
+    // window.onload = function() {
+    //     // Adjust the iframe height after the page is fully loaded
+    //     setTimeout(function() {
+    //       adjustIframeHeight();
+    //     }, 2000);
+    // };
+
+    function adjustIframeHeight() {
+      var iframe = document.getElementById('contact-form-wrapper');
+
+      // Ensure iframe onload triggers once the iframe content has completely loaded
+      iframe.onload = function() {
+          // Access the content document of the iframe
+          var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+          // Ensure the iframe content is fully loaded before adjusting height
+          if (iframeDocument) {
+              // Wait for all content (including images, etc.) inside the iframe to load
+              var images = iframeDocument.getElementsByTagName('img');
+              var totalImages = images.length;
+              var loadedImages = 0;
+
+              // Check if all images are loaded before adjusting iframe height
+              Array.from(images).forEach(function(image) {
+                  image.onload = function() {
+                      loadedImages++;
+                      if (loadedImages === totalImages) {
+                          // If all images are loaded, adjust the iframe height
+                          adjustIframeHeightWhenReady();
+                      }
+                  };
+              });
+
+              // If there are no images, we can adjust the height immediately
+              if (totalImages === 0) {
+                  adjustIframeHeightWhenReady();
+              }
+          }
+      };
+  }
+
+  function adjustIframeHeightWhenReady() {
+      var iframe = document.getElementById('contact-form-wrapper');
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      var iframeHeight = iframeDocument.body.scrollHeight;
+      
+      // Set the height of the iframe to match its content
+      iframe.style.height = iframeHeight + 'px';
+  }
   // </script>
 </body>
 </html>
