@@ -38,7 +38,7 @@
 
   </head>
   <body>
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYArij1lw5RmXR6xyFSttbbQqTuiAs3WfK29TPbtg7M0x7HQ/formResponse" method="post" id="contact-form" class="space-y-2 bg-white p-4 rounded-xl border">
+    <form id="contactForm" class="space-y-2 bg-white p-4 rounded-xl border">
       <div>
         <label class="text-sm font-medium" for="fullName" >Full Name</label>
         <input type="text" class="w-full rounded-md border px-3 py-2" id="fullName" name="entry.769603914" required>
@@ -65,16 +65,27 @@
         return false; 
       };
 
-      function handleFormSubmit(event) {
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
 
-        // Redirect to custom "Thank You" page after submission
-        window.location.href = 'https://google.com'; // Change to your own URL
+        const formData = new FormData(this);
 
-        // Submit the form using AJAX or form submission
-        var form = document.getElementById('contact-form');
-        form.submit();
-      }
+        const url = "https://script.google.com/macros/s/AKfycbxYlVn5qJ_eYcNxe8Q7kRZtaS-oiL__cVd4aMi4CCcWWP1vDv5N95HZa_vnNl-WTR60/exec";
+    
+        fetch(url, {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('responseMessage').innerHTML = data;
+          document.getElementById('contactForm').reset();
+        })
+        .catch(error => {
+          document.getElementById('responseMessage').innerHTML = 'An error occurred. Please try again.';
+          console.error('Error:', error);
+        });
+      });
     </script>
   </body>
 </html>
