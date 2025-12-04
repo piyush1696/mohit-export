@@ -17,6 +17,9 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
   <script src="assets/vendor/aos/aos.js"></script>
 
+  <!-- Custom JS -->
+  <script src="assets/js/main.js" defer></script>
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -343,7 +346,27 @@
 
           <!-- Form -->
           <div data-aos="fade-up" data-aos-delay="40">
-            <iframe src="./iframe/contact-form.html" id="contact-form-wrapper" scrolling="no" width="100%" height="400px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <form id="contactForm" class="space-y-2 bg-white p-4 rounded-xl border">
+              <div>
+                <label class="text-sm font-medium" for="fullName" >Full Name</label>
+                <input type="text" class="w-full rounded-md border px-3 py-2" id="fullName" name="entry.769603914" required>
+              </div>
+              <div>
+                <label for="email" class="text-sm font-medium">Email</label>
+                <input type="email" class="w-full rounded-md border px-3 py-2" id="email" name="entry.1423770340" required>
+              </div>
+              <div>
+                <label for="phoneNumber" class="text-sm font-medium">Mobile Number</label>
+                <input type="text" class="w-full rounded-md border px-3 py-2" id="phoneNumber" name="entry.961807974">
+              </div>
+              <div>
+                <label for="message" class="text-sm font-medium">Message</label>
+                <textarea class="w-full rounded-md border px-3 py-2" id="message" name="entry.867705892"></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button type="submit" class="px-4 py-2 bg-primary text-white rounded-md">Send Message</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -364,79 +387,6 @@
   <script>
     // Initialize AOS
     AOS.init({ duration: 700, once: true });
-
-    // Mobile nav toggle
-    const btnMobile = document.getElementById('btn-mobile');
-    const mobilePanel = document.getElementById('mobile-panel');
-    btnMobile.addEventListener('click', () => {
-      mobilePanel.classList.toggle('hidden');
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const href = a.getAttribute('href');
-        if(href.length > 1) {
-          e.preventDefault();
-          document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    window.onload = function() {
-      adjustIframeHeight();
-    };
-
-
-    // window.onload = function() {
-    //     // Adjust the iframe height after the page is fully loaded
-    //     setTimeout(function() {
-    //       adjustIframeHeight();
-    //     }, 2000);
-    // };
-
-    function adjustIframeHeight() {
-      var iframe = document.getElementById('contact-form-wrapper');
-
-      // Ensure iframe onload triggers once the iframe content has completely loaded
-      iframe.onload = function() {
-          // Access the content document of the iframe
-          var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-          // Ensure the iframe content is fully loaded before adjusting height
-          if (iframeDocument) {
-              // Wait for all content (including images, etc.) inside the iframe to load
-              var images = iframeDocument.getElementsByTagName('img');
-              var totalImages = images.length;
-              var loadedImages = 0;
-
-              // Check if all images are loaded before adjusting iframe height
-              Array.from(images).forEach(function(image) {
-                  image.onload = function() {
-                      loadedImages++;
-                      if (loadedImages === totalImages) {
-                          // If all images are loaded, adjust the iframe height
-                          adjustIframeHeightWhenReady();
-                      }
-                  };
-              });
-
-              // If there are no images, we can adjust the height immediately
-              if (totalImages === 0) {
-                  adjustIframeHeightWhenReady();
-              }
-          }
-      };
-  }
-
-  function adjustIframeHeightWhenReady() {
-      var iframe = document.getElementById('contact-form-wrapper');
-      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-      var iframeHeight = iframeDocument.body.scrollHeight;
-      
-      // Set the height of the iframe to match its content
-      iframe.style.height = iframeHeight + 'px';
-  }
   // </script>
 </body>
 </html>

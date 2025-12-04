@@ -78,11 +78,10 @@
         })
         .then(response => response.text())
         .then(data => {
-          document.getElementById('responseMessage').innerHTML = data;
+          alert("Your enquiry is registered with us. We will contact you soon.");
           document.getElementById('contactForm').reset();
         })
         .catch(error => {
-          document.getElementById('responseMessage').innerHTML = 'An error occurred. Please try again.';
           console.error('Error:', error);
         });
       });
