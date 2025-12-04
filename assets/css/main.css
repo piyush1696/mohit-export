@@ -55,7 +55,7 @@ html, body {
 
 .brand-bg-cover {
   /* background-image: linear-gradient(180deg, rgba(7,10,9,0.35), rgba(7,10,9,0.55)), url('../img/hero-carousel-1.jpeg'); */
-  background-image: url('../img/websitebanners/j.png');
+  background-image: url('../img/websitebanners/j.jpeg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
