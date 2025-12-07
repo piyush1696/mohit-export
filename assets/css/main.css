@@ -55,10 +55,25 @@ html, body {
 
 .brand-bg-cover {
   /* background-image: linear-gradient(180deg, rgba(7,10,9,0.35), rgba(7,10,9,0.55)), url('../img/hero-carousel-1.jpeg'); */
-  background-image: url('../img/websitebanners/j.jpeg');
+  background-image: url('../img/websitebanners/banner.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 480px) {
+  .brand-bg-cover {
+    min-height: 55vh;
+  }
+}
+
+.product-img {
+  height: 15rem;
+}
+@media (max-width: 480px) {
+  .product-img {
+    height: 12rem;
+  }
 }
 
 .section-heading {
