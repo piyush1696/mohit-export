@@ -4,101 +4,140 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vidhya Worldwide — Premium Agro Exports</title>
-  <meta name="description" content="Vidhya Worldwide Pvt. Ltd. — Quality Indian agro products exported globally. Grains, pulses, spices, oil seeds & more." />
-  <meta name="keywords" content="agro exports, pulses, spices, Vidhya Worldwide, Indian agro products" />
+  
+  <!-- Meta Description (important for SEO) -->
+  <meta name="description" content="Vidhya Worldwide Pvt. Ltd. — Exporting premium Indian agro products globally. Grains, pulses, spices, oil seeds & more." />
 
-  <!-- Tailwind via CDN (good for prototypes/static pages) -->
+  <!-- Meta Keywords (optional, but can still help) -->
+  <meta name="keywords" content="agro exports, pulses, spices, Vidhya Worldwide, Indian agro products, grains, basmati rice, cattle feed" />
+
+  <!-- Robots Meta Tag (allow Google to index and follow links) -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph for Social Media (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="Vidhya Worldwide — Premium Agro Exports" />
+  <meta property="og:description" content="Vidhya Worldwide Pvt. Ltd. — Premium Indian agro products exported globally. High-quality grains, pulses, and more." />
+  <meta property="og:image" content="path/to/your/og-image.jpg" /> <!-- Replace with your image URL -->
+  <meta property="og:url" content="https://www.vidhyaworldwide.com" /> <!-- Replace with your website URL -->
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card for Twitter Sharing -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vidhya Worldwide — Premium Agro Exports">
+  <meta name="twitter:description" content="Exporting premium Indian agro products globally. Grains, pulses, spices, and more.">
+  <meta name="twitter:image" content="path/to/your/twitter-image.jpg"> <!-- Replace with your image URL -->
+  <meta name="twitter:url" content="https://www.vidhyaworldwide.com">
+
+  <!-- Favicon (for browser tab icon) -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+  <!-- Structured Data (JSON-LD for Rich Snippets) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vidhya Worldwide Pvt. Ltd.",
+      "url": "https://www.vidhyaworldwide.com",
+      "logo": "https://www.vidhyaworldwide.com/assets/img/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/VidhyaWorldwide",
+        "https://twitter.com/VidhyaWorldwide",
+        "https://www.linkedin.com/company/vidhyaworldwide"
+      ],
+      "contactPoint": {
+        "@type": "Mohit Patel",
+        "telephone": "+91  9685279394",
+        "contactType": "Customer Service",
+        "areaServed": "IN",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Indore, Madhya Pradesh, India"
+      },
+      "description": "Vidhya Worldwide Pvt. Ltd. is a leading exporter of premium agro products from India, specializing in grains, pulses, spices, and oilseeds."
+    }
+  </script>
+  
+  <link rel="stylesheet" href="assets//css/main.css">
+
+  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom CSS -->
-  <link href="assets/css/main.css" rel="stylesheet" />
-
-  <!-- AOS (Animate On Scroll) -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-  <script src="assets/vendor/aos/aos.js"></script>
-
-  <!-- Custom JS -->
+  <!-- Custom JS (If any) -->
   <script src="assets/js/main.js" defer></script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 <body class="antialiased text-slate-800">
-  <!-- NAV -->
-  <header class="sticky top-0 w-full z-40 bg-white shadow-md">
-    <div class="mx-1 md:mx-10 flex items-center justify-between p-2">
-      <a href="#" class="flex items-center gap-3">
-        <img src="assets/img/logo.png" alt="Vidhya Worldwide Logo" class="brand-logo" />
-        <div>
-          <div class="text-2xl font-extrabold text-primary">Vidhya Worldwide</div>
-          <p class="text-md md:text-xl md:font-medium text-secondary mb-0">Premium Indian Agro Exports</p>
-        </div>
-      </a>
 
-      <nav id="main-nav" class="hidden md:flex items-end gap-6 text-lg font-medium">
-        <a href="#hero" class="text-nav">Home</a>
-        <a href="#about" class="text-nav">Who we are</a>
-        <a href="#products" class="text-nav">Products</a>
-        <a href="#quality" class="text-nav">Quality</a>
-        <a href="#contact" class="text-nav">Contact</a>
-      </nav>
+<!-- NAV -->
+<header class="sticky top-0 w-full z-40 bg-white shadow-md">
+  <div class="mx-1 md:mx-10 flex items-center justify-between p-2">
+    <a href="#" class="flex items-center gap-3">
+      <img src="assets/img/logo.png" alt="Vidhya Worldwide Logo" class="w-[130px] md:w-[90px] object-cover" />
+      <div>
+        <div class="text-2xl font-extrabold text-[#005e50]">Vidhya Worldwide</div>
+        <p class="text-md md:text-xl text-[#d3902e] mb-0">Premium Indian Agro Exports</p>
+      </div>
+    </a>
 
-      <div class="flex items-center gap-3 md:hidden">
-        <!-- Mobile menu button -->
-        <button id="btn-mobile" class="md:hidden p-2 rounded-md hover:bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
-          </svg>
-        </button>
+    <nav id="main-nav" class="hidden md:flex items-end gap-6 text-lg font-medium">
+      <a href="#hero" class="text-[#005e50] hover:text-[#d3902e]">Home</a>
+      <a href="#about" class="text-[#005e50] hover:text-[#d3902e]">Who we are</a>
+      <a href="#products" class="text-[#005e50] hover:text-[#d3902e]">Products</a>
+      <a href="#quality" class="text-[#005e50] hover:text-[#d3902e]">Quality</a>
+      <a href="#contact" class="text-[#005e50] hover:text-[#d3902e]">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3 md:hidden">
+      <!-- Mobile menu button -->
+      <button id="btn-mobile" class="p-2 rounded-md hover:bg-slate-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav panel -->
+  <div id="mobile-panel" class="md:hidden hidden border-t border-slate-100 bg-white">
+    <div class="p-4 space-y-3">
+      <a href="#hero" class="text-[#005e50] hover:text-[#d3902e] block">Home</a>
+      <a href="#about" class="text-[#005e50] hover:text-[#d3902e] block">Who we are</a>
+      <a href="#products" class="text-[#005e50] hover:text-[#d3902e] block">Products</a>
+      <a href="#quality" class="text-[#005e50] hover:text-[#d3902e] block">Quality</a>
+      <a href="#contact" class="text-[#005e50] hover:text-[#d3902e] block">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE CONTENT -->
+<main>
+  <!-- Brand Section -->
+  <section id="hero" class="bg-cover bg-center min-h-[85vh] flex items-center brand-bg-cover">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-5 py-2 md:p-0">
+      <div class="lg:w-6/12 text-white" data-aos="fade-right">
+        <!-- Your content here -->
       </div>
     </div>
+  </section>
 
-    <!-- Mobile nav panel -->
-    <div id="mobile-panel" class="md:hidden hidden border-t border-slate-100 bg-white">
-      <div class="p-4 space-y-3">
-        <a href="#hero" class="text-nav block">Home</a>
-        <a href="#about" class="text-nav block">Who we are</a>
-        <a href="#products" class="text-nav block">Products</a>
-        <a href="#quality" class="text-nav block">Quality</a>
-        <a href="#contact" class="text-nav block">Contact</a>
+  <!-- Content Section Example -->
+  <section id="home" class="py-4 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-0 mb-4" data-aos="fade-up">
+      <div class="text-3xl font-bold">Welcome to Vidhya Worldwide</div>
+      <div class="text-2xl font-semibold">
+        <span class="text-[#005e50]">Rooted in Quality.</span>
+        <span class="block md:inline text-[#d3902e]">Growing Through Trust.</span>
+      </div>
+      <div class="mt-1 text-lg">
+        <p>We connect India's rich agricultural heritage to global markets...</p>
       </div>
     </div>
-  </header>
-
-  <!-- PAGE CONTENT -->
-  <main>
-    <!-- Brand -->
-    <section id="hero" class="brand-bg-cover min-h-[85vh] flex items-center">
-      <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-5 py-2 md:p-0">
-        <div class="lg:w-6/12 text-white" data-aos="fade-right">
-          <!-- <h2 class="text-5xl font-bold leading-tight mb-6">DELIVERS THE AUTHENTIC TASTE OF INDIAN AGRO PRODUCTS ACROSS THE GLOBE </h2> -->
-
-          <!-- <a href="#products" class="text-xl px-4 py-2 border border-white text-white font-semibold rounded-md">Explore Products</a> -->
-        </div>
-      </div>
-    </section>
-
-    <section id="home" class="pt-16 py-4 bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-0 mb-4 aos-init aos-animate" data-aos="fade-up">
-        <div class="text-3xl font-bold">Welcome to Vidhya Worldwide</div>
-
-        <div class="text-2xl font-semibold">
-          <span class="text-primary">Rooted in Quality.</span>
-          <span class="block md:inline text-secondary">Growing Through Trust.</span>
-        </div>
-
-        <div data-aos="fade-up" class="aos-init aos-animate mt-1">
-          <p class="text-lg">
-            We connect India's rich agricultural heritage to global markets. As a trusted name in the import and export of premium agro products, we specialize in delivering quality, freshness, and consistency across borders.
-          </p>
-          <p class="text-lg">
-            With a strong network of farmers, processors, and logistics partners, we ensure that every shipment meets international standards for quality, sustainability, and reliability. Whether you're sourcing bulk commodities or niche agricultural produce, we are your dependable trade partner.
-          </p>
-        </div>
-      </div>
-    </section>
+  </section>
 
     <!-- WHO WE ARE -->
     <section id="about" class="py-4 bg-white">
@@ -374,7 +413,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t bg-primary text-white py-4 px-6 md:px-0">
+  <footer class="border-t bg-[#005e50] text-white py-4 px-6 md:px-0">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-6 text-sm">
       <div>
         <strong>Vidhya Worldwide Pvt. Ltd.</strong>
@@ -383,10 +422,9 @@
     </div>
   </footer>
 
-  <!-- JS: small interactivity -->
   <script>
     // Initialize AOS
     AOS.init({ duration: 700, once: true });
-  // </script>
-</body>
+  </script>
+  </body>
 </html>
