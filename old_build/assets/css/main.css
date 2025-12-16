@@ -1,0 +1,100 @@
+/* Minor custom styles */
+:root {
+  --brand-primary: #005e50; /* deep green */
+  --brand-secondary: #d3902e;
+  --muted: #6b7280;
+}
+
+html, body {
+  font-family: "Roboto", sans-serif;
+}
+
+.brand-logo {
+  object-fit: cover;
+  width: 130px;
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 90px;
+  }
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: var(--brand-primary);
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: var(--brand-primary);
+}
+
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: var(--brand-secondary);
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: var(--brand-primary);
+}
+
+.text-nav:hover {
+  color: var(--brand-primary);
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: var(--brand-secondary);
+}
+
+.product-img {
+  height: 15rem;
+}
+
+.brand-bg-cover {
+  /* background-image: linear-gradient(180deg, rgba(7,10,9,0.35), rgba(7,10,9,0.55)), url('../img/hero-carousel-1.jpeg'); */
+  background-image: url('../img/websitebanners/banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 480px) {
+  .brand-bg-cover {
+    min-height: 55vh;
+  }
+}
+
+.product-img {
+  height: 15rem;
+}
+@media (max-width: 480px) {
+  .product-img {
+    height: 12rem;
+  }
+}
+
+.section-heading {
+  color: var(--brand-primary);
+  font-size: 1.85rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  left: 35%;
+  bottom: -8px;
+  width: 70px;
+  height: 4px;
+  background-color: var(--brand-secondary);
+  border-radius: 2px;
+}
+
+/* simple fade-in for images */
+.img-cover { object-fit: cover; width:100%; height:100%; }
